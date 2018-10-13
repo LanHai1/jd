@@ -1,0 +1,967 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+    outline: none;
+    font-family: "Apple Braille";
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+/*清除浮动*/
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+/*版心*/
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #d62424;
+    height: 80px;
+}
+
+.header {
+    position: relative;
+}
+
+.header > .header-close {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: rgb(45, 45, 45);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/*header结束*/
+
+.nav-top {
+    background-color: #e3e4e5;
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 200;
+}
+
+.nav-top > .nav-main {
+    position: relative;
+}
+
+.nav-addr {
+    margin-left: 200px;
+    float: left;
+}
+
+.nav-addr .first-addr {
+    width: 58px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.nav-addr li .fa-map-marker {
+    font-size: 14px;
+    color: #f10215;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.nav-addr .addr-main {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 6px 0 #d0cccc;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.nav-addr .addr-main ul li {
+    width: 60px;
+    padding: 2px 0;
+    float: left;
+}
+
+.nav-addr .addr-main ul li a {
+    padding: 0 8px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+}
+
+.nav-addr .addr-main ul .addr-ul-selected {
+    background-color: #f10215;
+    color: #fff;
+}
+
+.nav-addr .addr-main ul .aHover {
+    background-color: #f4f4f4;
+    color: #c81623;
+}
+
+.nav-addr .addr-main .main-addr {
+    position: absolute;
+    top: -31px;
+    left: -1px;
+    display: inline-block;
+    width: 58px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/*地址结束*/
+
+.nav-nav {
+    position: absolute;
+    float: right;
+    right: 0;
+}
+
+.nav-nav > li {
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 7px;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #e3e4e5;
+}
+
+.nav-nav > li:first-child {
+    padding-right: 0;
+}
+
+.nav-nav > li[class='spacer'] {
+    border: 0;
+}
+
+.colorRed {
+    color: #f10215;
+}
+
+.nav-nav > .spacer {
+    overflow: hidden;
+    margin: 10px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    padding: 0;
+}
+
+.nav-nav > li > a:hover {
+    color: #f10215;
+}
+
+.nav-nav > li:last-child {
+    margin-right: 5px;
+}
+
+.nav-fff {
+    display: inline-block;
+    position: absolute;
+    top: -31px;
+    left: -1px;
+    background-color: #fff;
+    height: 30px;
+    line-height: 31px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+}
+
+.nav-addr .addr-main .main-addr, .nav-nav .nav-hover-fff, .nav-fff {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.nav-block {
+    width: 280px;
+    position: absolute;
+    left: -1px;
+    top: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 6px 0 #d0cccc;
+    display: none;
+}
+
+.nav-block > .nav-fff > a:hover {
+    color: #f10215;
+}
+
+.nav-block > .nav-block-top, .nav-block > .nav-block-bottom {
+    overflow: hidden;
+    padding: 10px 0 10px 15px;
+}
+
+.nav-block > .nav-block-top li, .nav-block > .nav-block-bottom li {
+    float: left;
+    width: 126px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.nav-hr {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    background-color: #f1f1f1;
+}
+
+.nav-block ul > li > a:hover {
+    color: #f10215;
+}
+
+ul li .fa-angle-down {
+    margin-left: 2px;
+    font-size: 17px;
+    position: relative;
+    top: 1px;
+}
+
+ul .nav-hover {
+    z-index: 999;
+}
+
+ul .nav-hover > .qygc-li {
+    width: 155px;
+    background-color: #fff;
+}
+
+.qygc > #qygc-top > li {
+    width: 60px;
+}
+
+#jd-khfw > .nav-block-top > li, #jd-khfw > .nav-block-bottom > li {
+    width: 70px;
+}
+
+#jd-khfw {
+    left: -96px;
+    width: 170px;
+}
+
+#jd-khfw > ul > p, #jd-wzdh-hover > ul > p {
+    height: 17px;
+    font-weight: 500;
+    color: #666;
+    line-height: 17px;
+}
+
+#khfw {
+    left: 94px;
+}
+
+.jd-wzdh-hover {
+    right: -81px;
+    width: 1189px;
+    padding: 15px 0;
+    position: absolute;
+    top: 30px;
+    border: 1px solid #e3e4e5;
+    display: none;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.jd-wzdh-hover > ul {
+    width: 276px;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.jd-wzdh-hover > .jd-wzdh-tszt {
+    width: 360px;
+    border: 0;
+}
+
+.jd-wzdh-hover > ul > li {
+    width: 85px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#jd-wzdh-hover > ul > li > a:hover {
+    color: #f10215;
+}
+
+#jd-wzdh-hover > ul > p {
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.ewm {
+    position: absolute;
+    left: -2px;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #cfcfcf;
+    background: #f6f6f6;
+    z-index: 99;
+}
+
+.ewm::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -9px;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #e4e4e4 #e4e4e4 #f6f6f6;
+}
+
+.jd-ewm {
+    margin: 3px 3px;
+}
+
+/*nav导航结束*/
+.search {
+    width: 100%;
+    position: relative;
+    background-color: #f0f3ef;
+}
+
+.logo {
+    display: inline-block;
+    width: 190px;
+    height: 169px;
+    overflow: hidden;
+    position: absolute;
+    float: left;
+    top: -31px;
+    border-bottom: 1px solid #ededed;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, .2);
+}
+
+.logo > a {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.search-main {
+    width: 100%;
+    height: 60px;
+    padding-top: 25px;
+    margin-left: 320px;
+    box-sizing: border-box;
+}
+
+.search-main > .search-input {
+    width: 550px;
+    position: relative;
+    float: left;;
+}
+
+.search-main > .search-input > input[type='text'] {
+    padding: 4px 44px 4px 4px;
+    width: 450px;
+    border: 1px solid transparent;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.search-main .search-input .fa-camera {
+    position: absolute;
+    right: 65px;
+    top: 9px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.search-main .search-input .fa-camera:hover {
+    color: #f10215;
+}
+
+.search-input > button {
+    height: 35px;
+    float: right;
+    width: 50px;
+    border: 0;
+    background-color: #f10215;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.search-input > button > .fa-search {
+    color: #fff;
+    font-size: 18px;
+}
+
+.my-gwc {
+    position: relative;
+    width: 190px;
+    height: 35px;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 30px;
+    border: 1px solid #e3e4e5;
+    background-color: #fff;
+    text-align: center;
+    line-height: 35px;
+}
+
+.my-gwc:hover {
+    border: 1px solid #ccc;
+}
+
+.search-main .my-gwc .fa-shopping-cart {
+    margin-right: 3px;
+    font-size: 16px;
+    color: #f10214;
+}
+
+.search-main .my-gwc > a {
+    color: #f10214;
+}
+
+.search-main .my-gwc > span {
+    height: 12px;
+    line-height: 15px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #f10214;
+    color: #fff;
+    display: inline-block;
+    padding: 0 3px;
+    position: absolute;
+    top: 5px;
+    left: 140px;
+}
+
+.my-gwc-hover {
+    position: absolute;
+    top: 34px;
+    border: 1px solid #ccc;
+    right: -1px;
+    width: 308px;
+    z-index: 998;
+    background-color: #fff;
+    display: none;
+}
+
+.my-gwc-hover > span {
+    display: inline-block;
+    width: 188px;
+    height: 2px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    background-color: #fff;
+}
+
+.my-gwc .my-gwc-hover .fa-shopping-cart {
+    color: #ccc;
+    font-size: 60px;
+    float: left;
+    margin-left: 30px;
+}
+
+.my-gwc-hover > strong {
+    color: #ccc;
+    float: left;
+    font-weight: 200;
+    position: absolute;
+    top: 50%;
+    margin-top: -17.5px;
+    right: 21px;
+}
+
+.search-nav {
+    margin: 10px 0 8px 320px;
+    font-weight: 200;
+}
+
+.search-nav > span {
+    margin-right: 20px;
+    color: #f10215;
+    float: left;
+}
+
+.search-nav > span > a {
+    color: #f10215;
+}
+
+.search-nav > span > a:hover {
+    color: #c81623;
+}
+
+.search-nav > ul {
+    float: left;
+}
+
+.search-nav > ul > li {
+    float: left;
+    margin-right: 10px;
+}
+
+.search-nav > ul > li > a:hover {
+    color: #f10215;
+}
+
+.search-nav2 {
+    margin: 24px 0 0 215px;
+    padding-bottom: 9px;
+    position: relative;
+}
+
+.search-nav2 > ul {
+    float: left;
+}
+
+.search-nav2 > ul > li {
+    float: left;
+    margin: 0 15px;
+}
+
+.search-nav2 > ul > li > a {
+    font-size: 14px;
+    color: #333;
+}
+
+.search-nav2 > ul > li > a:hover {
+    color: #c81623;
+}
+
+.search-nav2 > .spacer {
+    overflow: hidden;
+    margin: 5px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    padding: 0;
+    display: inline-block;
+    float: left;
+}
+
+.jd-juan {
+    float: left;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -19px;
+}
+
+.jd-juan > a {
+    display: inline-block;
+}
+
+/*搜索导航购物车结束*/
+main {
+    width: 100%;
+    position: relative;
+    background: url("img/jdLeftRight.png") #f0f3ef;
+    background-position-x: center;
+}
+
+main > .main-center {
+    height: 480px;
+}
+
+.fs_col1, .fs_col2, .fs_col3, .fs_col4 {
+    height: 100%;
+    margin-right: 10px;
+    float: left;
+}
+
+.fs_col1 {
+    background-color: saddlebrown;
+    width: 190px;
+}
+
+.fs_col2 {
+    width: 590px;
+    overflow: hidden;
+}
+
+.fs_col3, .fs_col4 {
+    width: 190px;
+    margin: 10px 10px 0 0;
+}
+
+.fs_col4 {
+    margin-top: 10px;
+    margin-right: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 2px 8px #e2e1e1;
+}
+
+.fs_col2 > .box {
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.box ul {
+    margin-top: 10px;
+    height: 100%;
+}
+
+.box ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.box ul li:first-child {
+    display: block;
+}
+
+.arrow > a {
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: '宋体';
+    text-decoration: none;
+    color: #fff;
+}
+
+.arrow {
+    opacity: .4;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow > .left {
+    left: 0;
+}
+
+.arrow > .right {
+    right: 0;
+}
+
+.box ol {
+    position: absolute;
+    bottom: 20px;
+    left: 18%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 0 5px;
+}
+
+.box ol li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid hsla(0, 0%, 100%, .4);
+    float: left;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.now {
+    border: 1px solid hsla(0, 0%, 100%, .5);
+    background: hsla(0, 0%, 100%, .9);
+    box-shadow: 0 0 0 4px hsla(0, 0%, 100%, .4);
+}
+
+.fs_col3 > a {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.fs_col3 > a > img {
+    width: 100%;
+}
+
+.fs_col3 > a > img:hover {
+    opacity: 0.7;
+}
+
+.fs_col4 > .user-inner {
+    position: relative;
+    padding-top: 62px;
+    height: 78px;
+}
+
+.fs_col4 > .user-inner > #userImg {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #e3e1df;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-left: -32.5px;
+    box-shadow: 3px 6px 25px #c3c3c3;
+}
+
+.fs_col4 > .user-inner > #userImg > img {
+    width: 55px;
+    background-size: 100%;
+}
+
+.fs_col4 > .user-inner > p {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 200;
+}
+
+.fs_col4 > .user-inner > p > a {
+    padding: 0 2px;
+}
+
+.fs_col4 > .user-inner > p > a:hover {
+    color: #c81623;
+}
+
+.fs_col4 > .user-inner > .user-fl {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.fs_col4 > .user-inner > .user-fl > a {
+    margin: 0 5px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #e43f3b;
+    display: inline-block;
+    border-radius: 13px;
+    box-shadow: 6px 8px 20px rgba(45, 45, 45, .15);
+    transition: background .3s ease, color .3s ease;
+}
+
+.fs_col4 > .user-inner > .user-fl > a:last-child {
+    background: #363634;
+    color: #e5d790;
+}
+
+.fs_col4 > .user-inner > .user-fl > a:hover {
+    background-color: #e01222;
+    color: #fff;
+}
+
+.fs_col4 > .J-news {
+    height: 130px;
+    margin-top: 10px;
+}
+
+.fs_col4 > .J-news > .J-news_head {
+    padding: 8px 0 0;
+    position: relative;
+    line-height: 12px;
+    font-weight: 200;
+}
+
+.fs_col4 > .J-news > .J-news_head > ul {
+    float: left;
+}
+
+.fs_col4 > .J-news > .J-news_head > ul > li {
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+
+}
+
+.fs_col4 > .J-news > .J-news_head > ul > li:first-child {
+    border-right: 1px solid #dfe0e1;
+}
+
+.fs_col4 > .J-news > .J-news_head > ul > li > a {
+    font-size: 12px;
+    color: #333;
+}
+
+.fs_col4 > .J-news > .J-news_head > a {
+    float: right;
+    margin-right: 15px;
+}
+
+.fs_col4 > .J-news > .J-news_head > a:hover {
+    color: #e01222;
+}
+
+#news-border {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    margin-left: 14px;
+    width: 27px;
+    height: 2px;
+    background: #db192b;
+    transform: translateX(0);
+    transition: all .3s ease;
+}
+
+.news-main {
+    padding-top: 16px;
+    margin: 0 15px;
+    height: 88px;
+}
+
+.news-main > ul > li {
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 200;
+}
+
+.news-main > ul > li > a:hover {
+    color: #c81623;
+}
+
+.news-main > #news-main-2 {
+    display: none;
+}
+
+.fs_col4 > .J_service {
+    height: 190px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.fs_col4 > .J_service > .J_service-main {
+    margin: 0 15px 15px;
+    border-top: 1px solid #ebeaea;
+    height: 1px;
+    box-sizing: border-box;
+}
+
+.J_service > ul {
+    padding: 4px 11px 11px;
+    overflow: hidden;
+}
+
+.J_service > ul > li {
+    float: left;
+    width: 42px;
+    height: 55px;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 9999;
+}
+
+.J_service > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.J_service > ul > li > a > svg {
+    margin: 4px auto 0;
+    width: 20px;
+    height: 20px;
+}
+
+.J_service > ul > li > a > span {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px solid #fff;
+    color: #bea68d;
+    -webkit-transition: color .15s ease;
+    -o-transition: color ease .15s;
+    -moz-transition: color ease .15s;
+    transition: color .15s ease;
+    font-weight: 200;
+}
+
+.J_service > ul > li > a:hover span, .J_service ul > li > a:hover svg > path {
+    color: #e01121;
+    fill: #e01121;
+}
+
+.service-div {
+    position: absolute;
+    width: 160px;
+    height: 180px;
+    background-color: #fff;
+    left: 0;
+    top: 11px;
+    z-index: 888;
+    margin: 9px 15px 0;
+}
+
+.service-div > .fa-times {
+    position: absolute;
+    font-size: 17px;
+    top: 16px;
+    right: 0;
+    cursor: pointer;
+}
+
+.service-div > .fa-times:hover {
+    color: #e01121;
+}
+
+.JD-hf > li {
+    height: 21px;
+    padding-top: 12px;
+    float: left;
+}
+
+.JD-hf li > a {
+    display: inline-block;
+    width: 100%;
+}

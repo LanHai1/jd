@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-2.2.4.js"></script>
+    <script>
+        //页面加载事件
+        $(function () {
+            var arr = [];
+            function data() {
+                let cloneD =  $("#t1>div:first-child").clone(true);
+                arr.push(cloneD);
+            }
+            data();
+            $("#add").on("click", function () {
+                $("#t1").append(arr[0]);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="add" value="添加">
+<div id="t1">
+    <div><input type="text" value="1"></div>
+    <div>test2</div>
+    <div>test3</div>
+</div>
+</body>
+</html>
